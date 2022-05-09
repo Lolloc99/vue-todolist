@@ -60,7 +60,9 @@ const app = new Vue (
         },
         // Methods
         methods : {
-            
+            crossClick: function(index) {
+                this.todoArray.splice(index, 1)
+            }
         }
     }
 )

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue TodoList</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
     <!-- VueJs -->
@@ -17,9 +21,11 @@
 
         <main>
             <div class="container">
+                <h1>To do list</h1>
                 <ul>
-                    <li v-for="element in todoArray">
+                    <li v-for="(element, index) in todoArray">
                         <span :class="element.done === true ? 'textline' : ''">{{element.text}}</span>
+                        <i class="fas fa-times-circle" @click="crossClick(index)"></i>
                     </li>
                 </ul>
             </div>
