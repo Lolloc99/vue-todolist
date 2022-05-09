@@ -74,6 +74,11 @@ const app = new Vue (
                 this.todoArray.push(newItem)
                 this.addTodoText = ""
             },
+
+            chengeStatus: function(index) {
+                this.todoArray[index].done = !this.todoArray[index].done
+                console.log(this.todoArray[index].done);
+            }
         }
     }
 )

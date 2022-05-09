@@ -23,12 +23,12 @@
             <div class="container">
                 <h1>To do list</h1>
                 <div id="newElement">
-                    <input type="text" name="newTodo" id="newTodo" placeholder="Aggiungi nuova todo" v-model="addTodoText">
+                    <input type="text" name="newTodo" id="newTodo" placeholder="Aggiungi nuova todo" v-model="addTodoText" @keyup.enter="addNewTodo">
                     <button @click="addNewTodo">Add</button>
                 </div>
                 <ul>
                     <li v-for="(element, index) in todoArray">
-                        <span :class="element.done === true ? 'textline' : ''">{{element.text}}</span>
+                        <span :class="element.done === true ? 'textline' : ''" @click="chengeStatus(index)">{{element.text}}</span>
                         <i class="fas fa-times-circle" @click="removeTodo(index)"></i>
                     </li>
                 </ul>
