@@ -56,13 +56,24 @@ const app = new Vue (
                     done: false
                 },
             ],
+
+            addTodoText: "",
             
         },
         // Methods
         methods : {
-            crossClick: function(index) {
+            removeTodo: function(index) {
                 this.todoArray.splice(index, 1)
-            }
+            },
+
+            addNewTodo: function() {
+                const newItem = {
+                    text: this.addTodoText,
+                    done: false
+                }
+                this.todoArray.push(newItem)
+                this.addTodoText = ""
+            },
         }
     }
 )

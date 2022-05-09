@@ -23,7 +23,6 @@ main {
     justify-content: center;
     align-items: center;
     width: 30%;
-    height: 50%;
     background-color: lightblue;
 }
 
@@ -40,13 +39,30 @@ li {
     justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
-    margin: 1rem;
+    margin: 1rem 0;
     width: 100%;
     border: 1px solid black;
     padding: 0.5rem;
+    margin-right: 10rem;
+
 }
 
 li i {
     color: red;
     cursor: pointer;
+}
+
+#newElement {
+    margin: 1rem 0;
+}
+
+#newElement input {
+    width: 200px;
+    height: 1.5rem;
+}
+
+#newElement button {
+    background-color: lightgreen;
+    width: 3rem;
+    height: 1.5rem;
 }
